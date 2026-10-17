@@ -1,0 +1,219 @@
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Bosh sahifa"
+msgstr "Главная"
+
+msgid "Do'kon"
+msgstr "Супер-Магазин"
+
+msgid "Bog'lanish"
+msgstr "Контакты"
+
+msgid "Tabiiy Sabzavot va Mevalar"
+msgstr "Свежие овощи и фрукты"
+
+msgid "Tabiiy Mahsulotlar"
+msgstr "Натуральные продукты"
+
+msgid "100 foiz xavfsiz to'lov tizimi"
+msgstr "100 процентов безопасная платёжная система"
+
+msgid "24/7 Qo'llab-quvvatlash"
+msgstr "Поддержка 24/7"
+
+msgid "30 Kun Qaytarish"
+msgstr "Возврат в течение 30 дней"
+
+msgid "30 kunlik pul qaytarish kafolati"
+msgstr "Гарантия возврата денег в течение 30 дней"
+
+msgid "300 $ dan ortiq buyurtmalar uchun"
+msgstr "Для заказов свыше 300 $"
+
+msgid "404 Sahifa"
+msgstr "Страница 404"
+
+msgid "Akkount"
+msgstr "Аккаунт"
+
+msgid "Aloqa"
+msgstr "Контакты"
+
+msgid "Azo bo'lish"
+msgstr "Подписаться"
+
+msgid "Barcha huquqlar hamoyalangan."
+msgstr "Все права защищены."
+
+msgid "Batafsil"
+msgstr "Подробнее"
+
+msgid "Bepul Yetkazib Berish"
+msgstr "Бесплатная доставка"
+
+msgid ""
+"Biz faqatgina sifatli, sarxil va salomatlik uchun foydali bo'lgan tabiiy "
+"mahsulotlarni taqdim etamiz."
+msgstr ""
+"Мы предлагаем только качественные, разнообразные и полезные для здоровья "
+"натуральные продукты."
+
+msgid "Biz haqimizda"
+msgstr "О нас"
+
+msgid "Buyurtma berish"
+msgstr "Оформить заказ"
+
+msgid "Buyurtmalar tarixi"
+msgstr "История заказов"
+
+msgid "Dizayn:"
+msgstr "Дизайн:"
+
+msgid "Do'kon ma'lumotlari"
+msgstr "Информация о магазине"
+
+msgid "Do'kon tafsilotlari"
+msgstr "Подробности о магазине"
+
+msgid ""
+"Doimiy ravishda shu do'kondan xarid qilaman. Narxlari hamyonbop va yetkazib "
+"berish vaqtida amalga oshiriladi."
+msgstr ""
+"Постоянно покупаю в этом магазине. Цены доступные, а доставка всегда "
+"вовремя."
+
+msgid "Email manzilingiz"
+msgstr "Ваш адрес электронной почты"
+
+msgid "Email: info@korzinka.uz"
+msgstr "Email: info@korzinka.uz"
+
+msgid "Foydalanish shartlari"
+msgstr "Условия использования"
+
+msgid "Istaklar ro'yxati"
+msgstr "Список желаний"
+
+msgid "Kalit so'z bo'yicha qidiruv"
+msgstr "Поиск по ключевому слову"
+
+msgid "Kalit so`zni kiriting..."
+msgstr "Введите ключевое слово..."
+
+msgid "Kasbi / Faoliyati"
+msgstr "Профессия / Род деятельности"
+
+msgid "Keyingisi"
+msgstr "Далее"
+
+msgid "Korzinka"
+msgstr "Korzinka"
+
+msgid "Mahsulot haqida"
+msgstr "О товаре"
+
+msgid ""
+"Mahsulotlar juda ham sarxil va sifatli yetkazib berildi. Xizmat ko'rsatish "
+"darajasi a'lo darajada!"
+msgstr ""
+"Товары были доставлены очень разнообразными и качественными. Уровень "
+"обслуживания на высоте!"
+
+msgid "Mamnun mijozlar"
+msgstr "Довольные клиенты"
+
+msgid "Manzil: Toshkent sh., Chilonzor tumani"
+msgstr "Адрес: г. Ташкент, Чиланзарский район"
+
+msgid "Mavjud mahsulotlar"
+msgstr "Доступные товары"
+
+msgid "Maxfiylik siyosati"
+msgstr "Политика конфиденциальности"
+
+msgid "Mening hisobim"
+msgstr "Мой аккаунт"
+
+msgid "Mevalar"
+msgstr "Фрукты"
+
+msgid "Mijoz Ismi"
+msgstr "Имя клиента"
+
+msgid "Mijozlar fikri"
+msgstr "Отзывы клиентов"
+
+msgid "Mijozlarimiz fikri"
+msgstr "Мнение наших клиентов"
+
+msgid "Mijozlarimiz nima deyishadi!"
+msgstr "Что говорят наши клиенты!"
+
+msgid "Nega bizni tanlashadi?"
+msgstr "Почему выбирают нас?"
+
+msgid "Oldingisi"
+msgstr "Назад"
+
+msgid "Qaytaruv xizmati"
+msgstr "Служба возврата"
+
+msgid "Qidirish"
+msgstr "Поиск"
+
+msgid "Sabzavotlar"
+msgstr "Овощи"
+
+msgid "Sahifalar"
+msgstr "Страницы"
+
+msgid "Savat"
+msgstr "Корзина"
+
+msgid "Savatga qo'shish"
+msgstr "Добавить в корзину"
+
+msgid "Sifat sertifikatlari"
+msgstr "Сертификаты качества"
+
+msgid "Tabiiy Mahsulotlar Do'koni"
+msgstr "Магазин натуральных продуктов"
+
+msgid "Tabiiy Pomidor"
+msgstr "Натуральный помидор"
+
+msgid "Tabiiy mahsulotlar"
+msgstr "Натуральные продукты"
+
+msgid "Telefon: +998 71 200 00 00"
+msgstr "Телефон: +998 71 200 00 00"
+
+msgid "Tezkor va doimiy yordam"
+msgstr "Быстрая и постоянная поддержка"
+
+msgid "To'lov usullari"
+msgstr "Способы оплаты"
+
+msgid "Toshkent sh., Chilonzor tumani"
+msgstr "г. Ташкент, Чиланзарский район"
+
+msgid "Xavfsiz To'lov"
+msgstr "Безопасная оплата"
+
+msgid "Xizmat sifati"
+msgstr "Качество обслуживания"
+
+msgid "Yordam"
+msgstr "Помощь"
+
+msgid "Yuborish"
+msgstr "Отправить"
+
+msgid "100% xavfsiz to'lov tizimi"
+msgstr ""

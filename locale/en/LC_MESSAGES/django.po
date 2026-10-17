@@ -1,0 +1,252 @@
+# Translations template for Project.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the Project project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 20:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Bosh sahifa"
+msgstr "Home"
+
+msgid "Do'kon"
+msgstr "Shop"
+
+msgid "Mahsulot haqida"
+msgstr "Product Details"
+
+msgid "Do'kon tafsilotlari"
+msgstr "Shop Details"
+
+msgid "Sahifalar"
+msgstr "Pages"
+
+msgid "Bog'lanish"
+msgstr "Contact Us"
+
+msgid "100% Tabiiy Mahsulotlar"
+msgstr "100% Organic Products"
+
+msgid "Tabiiy Sabzavot va Mevalar"
+msgstr "Organic Vegetables & Fruits"
+
+msgid "Qidirish"
+msgstr "Search"
+
+msgid "Qidiruv"
+msgstr "Search"
+
+msgid "Kalit so'zni kiriting..."
+msgstr "Enter keyword..."
+
+msgid "Yuborish"
+msgstr "Submit"
+
+msgid "Hozir yuborish"
+msgstr "Submit Now"
+
+msgid "Sabzavotlar"
+msgstr "Vegetables"
+
+msgid "Mevalar"
+msgstr "Fruits"
+
+msgid "Oldingi"
+msgstr "Previous"
+
+msgid "Keyingi"
+msgstr "Next"
+
+msgid "Toshkent sh., Chilonzor tumani"
+msgstr "Tashkent city, Chilanzar district"
+
+msgid "Maxfiylik siyosati"
+msgstr "Privacy Policy"
+
+msgid "Foydalanish shartlari"
+msgstr "Terms of Use"
+
+msgid "Qaytaruv xizmati"
+msgstr "Return Policy"
+
+msgid "Bepul Yetkazib Berish"
+msgstr "Free Shipping"
+
+msgid "300 $ dan ortiq buyurtmalar uchun"
+msgstr "For orders over $300"
+
+msgid "Xavfsiz To'lov"
+msgstr "Security Payment"
+
+msgid "100% xavfsiz to'lov tizimi"
+msgstr "100% secure payment system"
+
+msgid "30 Kun Qaytarish"
+msgstr "30 Day Return"
+
+msgid "30 kunlik pul qaytarish kafolati"
+msgstr "30 day money guarantee"
+
+msgid "24/7 Qo'llab-quvvatlash"
+msgstr "24/7 Support"
+
+msgid "Tezkor va doimiy yordam"
+msgstr "Fast and instant support"
+
+msgid "Email pochtangizni kiriting"
+msgstr "Enter your email"
+
+msgid "Obuna bo'lish"
+msgstr "Subscribe"
+
+msgid "Nega bizni tanlashadi?"
+msgstr "Why Choose Us?"
+
+msgid ""
+"Biz faqatgina sifatli, sarxil va salomatlik uchun foydali bo'lgan tabiiy "
+"mahsulotlarni taqdim etamiz."
+msgstr "We provide only high quality, fresh and healthy natural products."
+
+msgid "Batafsil"
+msgstr "Read More"
+
+msgid "Do'kon ma'lumotlari"
+msgstr "Shop Info"
+
+msgid "Biz haqimizda"
+msgstr "About Us"
+
+msgid "Yordam"
+msgstr "Help"
+
+msgid "Akkount"
+msgstr "Account"
+
+msgid "Mening hisobim"
+msgstr "My Account"
+
+msgid "Savat"
+msgstr "Shopping Cart"
+
+msgid "Istaklar ro'yxati"
+msgstr "Wishlist"
+
+msgid "Buyurtmalar tarixi"
+msgstr "Order History"
+
+msgid "Buyurtma berish"
+msgstr "Checkout"
+
+msgid "Mijozlar fikri"
+msgstr "Testimonial"
+
+msgid "404 Xatolik"
+msgstr "404 Error"
+
+msgid "Aloqa"
+msgstr "Contact"
+
+msgid "Manzil: Toshkent sh., Chilonzor tumani"
+msgstr "Address: Tashkent city, Chilanzar district"
+
+msgid "Email: info@korzinka.uz"
+msgstr "Email: info@korzinka.uz"
+
+msgid "Telefon: +998 71 200 00 00"
+msgstr "Phone: +998 71 200 00 00"
+
+msgid "To'lov usullari"
+msgstr "Payment Methods"
+
+msgid "Barcha huquqlar himoyalangan."
+msgstr "All rights reserved."
+
+msgid "Dizayn:"
+msgstr "Design:"
+
+msgid "Tabiiy Pomidor"
+msgstr "Natural Tomato"
+
+msgid "Savatga qo'shish"
+msgstr "Add to cart"
+
+msgid "Mamnun mijozlar"
+msgstr "Satisfied customers"
+
+msgid "Xizmat sifati"
+msgstr "Service quality"
+
+msgid "Sifat sertifikatlari"
+msgstr "Quality certificates"
+
+msgid "Mavjud mahsulotlar"
+msgstr "Available products"
+
+msgid "404 Sahifa"
+msgstr "404 Page"
+
+msgid "Azo bo'lish"
+msgstr "Sign up"
+
+msgid "Barcha huquqlar hamoyalangan."
+msgstr "All rights reserved."
+
+msgid ""
+"Doimiy ravishda shu do'kondan xarid qilaman. Narxlari hamyonbop va yetkazib "
+"berish vaqtida amalga oshiriladi."
+msgstr "I regularly shop from this store. The prices are affordable and delivery is done on time."
+
+msgid "Email manzilingiz"
+msgstr "Your email address"
+
+msgid "Kalit so'z bo'yicha qidiruv"
+msgstr "Search by keyword"
+
+msgid "Kalit so`zni kiriting..."
+msgstr "Enter keyword..."
+
+msgid "Kasbi / Faoliyati"
+msgstr "Profession / Activity"
+
+msgid "Keyingisi"
+msgstr "Next"
+
+msgid "Korzinka"
+msgstr "Korzinka"
+
+msgid ""
+"Mahsulotlar juda ham sarxil va sifatli yetkazib berildi. Xizmat ko'rsatish "
+"darajasi a'lo darajada!"
+msgstr "The products were delivered very fresh and of high quality. The service level is excellent!"
+
+msgid "Mijoz Ismi"
+msgstr "Customer Name"
+
+msgid "Mijozlarimiz fikri"
+msgstr "Our Customer Reviews"
+
+msgid "Mijozlarimiz nima deyishadi!"
+msgstr "What Our Customers Say!"
+
+msgid "Oldingisi"
+msgstr "Previous"
+
+msgid "Tabiiy Mahsulotlar Do'koni"
+msgstr "Natural Products Store"
+
+msgid "Tabiiy mahsulotlar"
+msgstr "Natural products"
+
+msgid "Tabiiy Mahsulotlar"
+msgstr "Natural Products"

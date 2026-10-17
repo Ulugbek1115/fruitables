@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="row g-4">
+    {% for fruit in fruits %}
+    <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="border border-primary rounded vesitable-item h-100 bg-white d-flex flex-column justify-content-between">
+            <div class="position-relative">
+                {% if fruit.image %}
+                    <img src="{{ fruit.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ fruit.title }}">
+                {% else %}
+                    <img src="{% static 'img/fruite-item-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                {% endif %}
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">
+                    Fruit
+                </div>
+            </div>
+            <div class="p-4 rounded-bottom d-flex flex-column flex-grow-1 justify-content-between">
+                <div>
+                    <h4>{{ fruit.title }}</h4>
+                    <p>{{ fruit.description }}</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2">
+                    <p class="text-dark fs-5 fw-bold mb-0">{{ fruit.price }} $</p>
+                    <a href="{% url 'add_to_cart' fruit.id %}"
+                       class="btn border border-secondary rounded-pill px-3 text-primary position-relative style-normal"
+                       style="position: static !important;">
+                        <i class="fa fa-shopping-bag me-2 text-primary"></i> {% trans "Savatga qo'shish" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center py-5">
+        <p>{% trans "Hozircha mahsulotlar yo'q." %}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

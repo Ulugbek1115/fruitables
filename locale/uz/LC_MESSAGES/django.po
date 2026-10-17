@@ -1,0 +1,210 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Bosh sahifa"
+msgstr "Bosh sahifa"
+
+msgid "Do'kon"
+msgstr "Do'kon"
+
+msgid "Bog'lanish"
+msgstr "Bog'lanish"
+
+msgid "100% Tabiiy Mahsulotlar"
+msgstr ""
+
+msgid "100% xavfsiz to'lov tizimi"
+msgstr ""
+
+msgid "24/7 Qo'llab-quvvatlash"
+msgstr ""
+
+msgid "30 Kun Qaytarish"
+msgstr ""
+
+msgid "30 kunlik pul qaytarish kafolati"
+msgstr ""
+
+msgid "300 $ dan ortiq buyurtmalar uchun"
+msgstr ""
+
+msgid "404 Sahifa"
+msgstr ""
+
+msgid "Akkount"
+msgstr ""
+
+msgid "Aloqa"
+msgstr ""
+
+msgid "Azo bo'lish"
+msgstr ""
+
+msgid "Barcha huquqlar hamoyalangan."
+msgstr ""
+
+msgid "Batafsil"
+msgstr ""
+
+msgid "Bepul Yetkazib Berish"
+msgstr ""
+
+msgid ""
+"Biz faqatgina sifatli, sarxil va salomatlik uchun foydali bo'lgan tabiiy "
+"mahsulotlarni taqdim etamiz."
+msgstr ""
+
+msgid "Biz haqimizda"
+msgstr ""
+
+msgid "Buyurtma berish"
+msgstr ""
+
+msgid "Buyurtmalar tarixi"
+msgstr ""
+
+msgid "Dizayn:"
+msgstr ""
+
+msgid "Do'kon ma'lumotlari"
+msgstr ""
+
+msgid "Do'kon tafsilotlari"
+msgstr ""
+
+msgid ""
+"Doimiy ravishda shu do'kondan xarid qilaman. Narxlari hamyonbop va yetkazib "
+"berish vaqtida amalga oshiriladi."
+msgstr ""
+
+msgid "Email manzilingiz"
+msgstr ""
+
+msgid "Email: info@korzinka.uz"
+msgstr ""
+
+msgid "Foydalanish shartlari"
+msgstr ""
+
+msgid "Istaklar ro'yxati"
+msgstr ""
+
+msgid "Kalit so'z bo'yicha qidiruv"
+msgstr ""
+
+msgid "Kalit so`zni kiriting..."
+msgstr ""
+
+msgid "Kasbi / Faoliyati"
+msgstr ""
+
+msgid "Keyingisi"
+msgstr ""
+
+msgid "Korzinka"
+msgstr ""
+
+msgid "Mahsulot haqida"
+msgstr ""
+
+msgid ""
+"Mahsulotlar juda ham sarxil va sifatli yetkazib berildi. Xizmat ko'rsatish "
+"darajasi a'lo darajada!"
+msgstr ""
+
+msgid "Mamnun mijozlar"
+msgstr ""
+
+msgid "Manzil: Toshkent sh., Chilonzor tumani"
+msgstr ""
+
+msgid "Mavjud mahsulotlar"
+msgstr ""
+
+msgid "Maxfiylik siyosati"
+msgstr ""
+
+msgid "Mening hisobim"
+msgstr ""
+
+msgid "Mevalar"
+msgstr ""
+
+msgid "Mijoz Ismi"
+msgstr ""
+
+msgid "Mijozlar fikri"
+msgstr ""
+
+msgid "Mijozlarimiz fikri"
+msgstr ""
+
+msgid "Mijozlarimiz nima deyishadi!"
+msgstr ""
+
+msgid "Nega bizni tanlashadi?"
+msgstr ""
+
+msgid "Oldingisi"
+msgstr ""
+
+msgid "Qaytaruv xizmati"
+msgstr ""
+
+msgid "Qidirish"
+msgstr ""
+
+msgid "Sabzavotlar"
+msgstr ""
+
+msgid "Sahifalar"
+msgstr ""
+
+msgid "Savat"
+msgstr ""
+
+msgid "Savatga qo'shish"
+msgstr ""
+
+msgid "Sifat sertifikatlari"
+msgstr ""
+
+msgid "Tabiiy Mahsulotlar Do'koni"
+msgstr ""
+
+msgid "Tabiiy Pomidor"
+msgstr ""
+
+msgid "Tabiiy Sabzavot va Mevalar"
+msgstr ""
+
+msgid "Tabiiy mahsulotlar"
+msgstr ""
+
+msgid "Telefon: +998 71 200 00 00"
+msgstr ""
+
+msgid "Tezkor va doimiy yordam"
+msgstr ""
+
+msgid "To'lov usullari"
+msgstr ""
+
+msgid "Toshkent sh., Chilonzor tumani"
+msgstr ""
+
+msgid "Xavfsiz To'lov"
+msgstr ""
+
+msgid "Xizmat sifati"
+msgstr ""
+
+msgid "Yordam"
+msgstr ""
+
+msgid "Yuborish"
+msgstr ""
+
+msgid "Tabiiy Mahsulotlar"
+msgstr ""
