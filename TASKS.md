@@ -90,4 +90,29 @@ faqat o'rtadagi qismni `{% block content %}` ichida qoldir.
 
 ---
 
+## 5-qism. Qo'shimcha
+
+**16. `static/lib/` papka yo'q**
+`.gitignore` dagi `lib/` qatori `static/lib/` ni ham e'tiborsiz qoldiryapti, shuning uchun lightbox, owlcarousel,
+easing va waypoints repozitoriyaga tushmagan. Saytda ular 404 beradi, karusel ishlamaydi.
+`.gitignore` da `lib/` ni `/lib/` ga o'zgartir, `static/lib/` ni qo'shib commit qil.
+
+**17. Til almashtirgich ishlamaydi**
+`/ru/shop/` sahifasida EN tanlansa, yana `/ru/shop/` ga qaytadi.
+`base.html` dagi `next` maydoniga `request.path` ni til prefiksisiz (`/ru/` siz) yubor.
+
+**18. Loyihani ishga tushirish**
+Endi `requirements.txt` bor:
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py compilemessages
+```
+`.mo` fayllar endi git'da saqlanmaydi, shuning uchun `compilemessages` qilish shart.
+Buning uchun gettext kerak: `sudo apt install gettext`.
+
+---
+
 Hammasini qilib bo'lgach, menga yoz — tekshirib beraman.
