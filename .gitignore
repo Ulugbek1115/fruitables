@@ -103,3 +103,6 @@ shippable.yml
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Compiled translations (build with: python manage.py compilemessages)
+*.mo
