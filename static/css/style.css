@@ -585,3 +585,14 @@ body,
     background-color: #e2e8f0 !important;
     background-image: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%) !important;
 }
+
+
+
+            .hero-header, .page-header {
+                background-image: none !important;
+                background-color: #f4f6f8 !important;
+            }
+            .dropdown-menu {
+                background-color: #ffffff !important;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+            }

@@ -1,256 +1,100 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-{% load  i18n %}
-<html lang="en">
+{% load i18n %}
 
-<head>
-    <meta charset="utf-8">
-    <title>Fruitables - Cart</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+{% block title %}Korzinka - {% trans "Savat" %}{% endblock %}
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
+{% block content %}
 
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
-    <style>
-        .hero-header, .page-header {
-            background-image: none !important;
-            background-color: #f4f6f8 !important;
-        }
-        .dropdown-menu {
-            background-color: #ffffff !important;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
-        }
-    </style>
-</head>
-
-<body>
-
-   <!-- Navbar start -->
-<div class="container-fluid fixed-top">
-    ...
-    <nav class="navbar navbar-light bg-white navbar-expand-xl">
-        <a href="{% url 'index' %}" class="navbar-brand"><h1 class="text-primary display-6">Korzinka</h1></a>
-
-        <!-- ВОТ ЗДЕСЬ НАХОДЯТСЯ ССЫЛКИ: -->
-        <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-            <div class="navbar-nav mx-auto">
-                <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
-                <a href="{% url 'shop' %}" class="nav-item nav-link">Shop</a>
-                <a href="{% url 'shop_detail' %}" class="nav-item nav-link">Shop Detail</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                        <a href="{% url 'cart' %}" class="dropdown-item active">Cart</a>
-                        <a href="#" class="dropdown-item">Checkout</a>
-                        <a href="#" class="dropdown-item">Testimonial</a>
-                        <a href="#" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-</div>
-<!-- Navbar End -->
-
-    <!-- Single Page Header start -->
     <div class="container-fluid page-header py-5">
-        <h1 class="text-center text-dark display-6 mt-5">Cart</h1>
+        <h1 class="text-center text-dark display-6 mt-5">{% trans "Savat" %}</h1>
         <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-            <li class="breadcrumb-item active text-primary">Cart</li>
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a></li>
+            <li class="breadcrumb-item active text-primary">{% trans "Savat" %}</li>
         </ol>
     </div>
-    <!-- Single Page Header End -->
 
-    <!-- Cart Page Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
+
+            {% if cart_items %}
             <div class="table-responsive">
                 <table class="table">
                     <thead>
-                      <tr>
-                        <th scope="col">Products</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Handle</th>
-                      </tr>
+                        <tr>
+                            <th scope="col">{% trans "Mahsulot" %}</th>
+                            <th scope="col">{% trans "Nomi" %}</th>
+                            <th scope="col">{% trans "Narxi" %}</th>
+                            <th scope="col">{% trans "Soni" %}</th>
+                            <th scope="col">{% trans "Jami" %}</th>
+                            <th scope="col"></th>
+                        </tr>
                     </thead>
                     <tbody>
+                        {% for item in cart_items %}
                         <tr>
                             <th scope="row">
-                                <div class="d-flex align-items-center">
-                                    <img src="{% static 'img/fruite-item-3.jpg' %}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-                                </div>
+                                <img src="{{ item.fruit.image.url }}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="{{ item.fruit.title }}">
                             </th>
+                            <td><p class="mb-0 mt-4">{{ item.fruit.title }}</p></td>
+                            <td><p class="mb-0 mt-4">{{ item.price|floatformat:2 }} $</p></td>
                             <td>
-                                <p class="mb-0 mt-4">Big Banana</p>
-                            </td>
-                            <td>
-                                <p class="mb-0 mt-4">2.99 $</p>
-                            </td>
-                            <td>
-                                <div class="input-group quantity mt-4" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
+                                <div class="d-flex align-items-center mt-4">
+                                    <form method="post" action="{% url 'update_cart' item.fruit.id 'dec' %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm rounded-circle bg-light border"><i class="fa fa-minus"></i></button>
+                                    </form>
+                                    <span class="mx-3">{{ item.quantity }}</span>
+                                    <form method="post" action="{% url 'update_cart' item.fruit.id 'inc' %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm rounded-circle bg-light border"><i class="fa fa-plus"></i></button>
+                                    </form>
                                 </div>
                             </td>
+                            <td><p class="mb-0 mt-4">{{ item.total|floatformat:2 }} $</p></td>
                             <td>
-                                <p class="mb-0 mt-4">2.99 $</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-md rounded-circle bg-light border mt-4">
-                                    <i class="fa fa-times text-danger"></i>
-                                </button>
+                                <form method="post" action="{% url 'remove_from_cart' item.fruit.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-md rounded-circle bg-light border mt-4"><i class="fa fa-times text-danger"></i></button>
+                                </form>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="d-flex align-items-center">
-                                    <img src="{% static 'img/fruite-item-5.jpg' %}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-                                </div>
-                            </th>
-                            <td>
-                                <p class="mb-0 mt-4">Potatoes</p>
-                            </td>
-                            <td>
-                                <p class="mb-0 mt-4">2.99 $</p>
-                            </td>
-                            <td>
-                                <div class="input-group quantity mt-4" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="mb-0 mt-4">2.99 $</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-md rounded-circle bg-light border mt-4">
-                                    <i class="fa fa-times text-danger"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="d-flex align-items-center">
-                                    <img src="{% static 'img/fruite-item-2.jpg' %}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-                                </div>
-                            </th>
-                            <td>
-                                <p class="mb-0 mt-4">Awesome Brocoli</p>
-                            </td>
-                            <td>
-                                <p class="mb-0 mt-4">2.99 $</p>
-                            </td>
-                            <td>
-                                <div class="input-group quantity mt-4" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="mb-0 mt-4">2.99 $</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-md rounded-circle bg-light border mt-4">
-                                    <i class="fa fa-times text-danger"></i>
-                                </button>
-                            </td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
-            <div class="mt-5">
-                <input type="text" class="border-0 border-bottom rounded me-5 py-3 mb-4" placeholder="Coupon Code">
-                <button class="btn border-secondary rounded-pill px-4 py-3 text-primary" type="button">Apply Coupon</button>
-            </div>
-            <div class="row g-4 justify-content-end">
-                <div class="col-8"></div>
+
+            <div class="row g-4 justify-content-end mt-4">
                 <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
                     <div class="bg-light rounded">
                         <div class="p-4">
-                            <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
+                            <h1 class="display-6 mb-4">{% trans "Jami" %}</h1>
                             <div class="d-flex justify-content-between mb-4">
-                                <h5 class="mb-0 me-4">Subtotal:</h5>
-                                <p class="mb-0">$96.00</p>
+                                <h5 class="mb-0 me-4">{% trans "Mahsulotlar:" %}</h5>
+                                <p class="mb-0">${{ subtotal|floatformat:2 }}</p>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <h5 class="mb-0 me-4">Shipping</h5>
-                                <div class="">
-                                    <p class="mb-0">Flat rate: $3.00</p>
-                                </div>
+                                <h5 class="mb-0 me-4">{% trans "Yetkazib berish" %}</h5>
+                                <p class="mb-0">${{ shipping|floatformat:2 }}</p>
                             </div>
-                            <p class="mb-0 text-end">Shipping to Ukraine.</p>
                         </div>
                         <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
-                            <h5 class="mb-0 ps-4 me-4">Total</h5>
-                            <p class="mb-0 pe-4">$99.00</p>
+                            <h5 class="mb-0 ps-4 me-4">{% trans "Umumiy" %}</h5>
+                            <p class="mb-0 pe-4">${{ total|floatformat:2 }}</p>
                         </div>
-                        <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Proceed Checkout</button>
+                        <a href="{% url 'checkout' %}" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">{% trans "Buyurtma berish" %}</a>
                     </div>
                 </div>
             </div>
+
+            {% else %}
+            <div class="text-center py-5">
+                <h3 class="mb-4">{% trans "Savatingiz bo'sh" %}</h3>
+                <a href="{% url 'shop' %}" class="btn border-secondary rounded-pill px-4 py-3 text-primary">{% trans "Do'konga o'tish" %}</a>
+            </div>
+            {% endif %}
+
         </div>
     </div>
-    <!-- Cart Page End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-
-    <!-- Template Javascript -->
-    <script src="{% static 'js/main.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}
