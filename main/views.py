@@ -1,10 +1,12 @@
 import re
 from decimal import Decimal, InvalidOperation
 
-from django.shortcuts import render, redirect
+from django.db import transaction
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 
-from .models import Fruit
+from .forms import OrderForm
+from .models import Fruit, Order, OrderItem
 
 SHIPPING = Decimal('3.00')
 
@@ -18,21 +20,7 @@ def parse_price(value):
         return Decimal('0')
 
 
-def index(request):
-    fruits = Fruit.objects.all()
-    return render(request, 'index.html', {'fruits': fruits})
-
-
-def shop(request):
-    fruits = Fruit.objects.all()
-    return render(request, 'shop.html', {'fruits': fruits})
-
-
-def shop_detail(request):
-    return render(request, 'shop-detail.html')
-
-
-def cart(request):
+def build_cart(request):
     cart_session = request.session.get('cart', {})
     cart_items = []
     subtotal = Decimal('0')
@@ -52,12 +40,28 @@ def cart(request):
         })
 
     shipping = SHIPPING if cart_items else Decimal('0')
-    return render(request, 'cart.html', {
+    return {
         'cart_items': cart_items,
         'subtotal': subtotal,
         'shipping': shipping,
         'total': subtotal + shipping,
-    })
+    }
+
+
+def index(request):
+    return render(request, 'index.html', {'fruits': Fruit.objects.all()})
+
+
+def shop(request):
+    return render(request, 'shop.html', {'fruits': Fruit.objects.all()})
+
+
+def shop_detail(request):
+    return render(request, 'shop-detail.html')
+
+
+def cart(request):
+    return render(request, 'cart.html', build_cart(request))
 
 
 @require_POST
@@ -93,7 +97,39 @@ def remove_from_cart(request, fruit_id):
 
 
 def checkout(request):
-    return render(request, 'checkout.html')
+    data = build_cart(request)
+
+    if request.method == 'POST' and data['cart_items']:
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            with transaction.atomic():
+                order = form.save(commit=False)
+                order.total = data['total']
+                order.save()
+                for item in data['cart_items']:
+                    OrderItem.objects.create(
+                        order=order,
+                        fruit=item['fruit'],
+                        title=item['fruit'].title,
+                        price=item['price'],
+                        quantity=item['quantity'],
+                    )
+            request.session['cart'] = {}
+            request.session['last_order_id'] = order.id
+            return redirect('order_success')
+    else:
+        form = OrderForm()
+
+    data['form'] = form
+    return render(request, 'checkout.html', data)
+
+
+def order_success(request):
+    order_id = request.session.get('last_order_id')
+    if not order_id:
+        return redirect('index')
+    order = get_object_or_404(Order, id=order_id)
+    return render(request, 'order_success.html', {'order': order})
 
 
 def testimonial(request):

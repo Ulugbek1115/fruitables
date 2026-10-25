@@ -6,7 +6,6 @@
 
 {% block content %}
 
-    <!-- Page Header -->
     <div class="container-fluid page-header py-5">
         <h1 class="text-center text-dark display-6 mt-5">{% trans "Buyurtma berish" %}</h1>
         <ol class="breadcrumb justify-content-center mb-0">
@@ -16,56 +15,64 @@
         </ol>
     </div>
 
-    <!-- Checkout -->
     <div class="container-fluid py-5">
         <div class="container py-5">
 
             {% if cart_items %}
             <h1 class="mb-4">{% trans "Buyurtma ma'lumotlari" %}</h1>
-            <form>
+            <form method="post" action="{% url 'checkout' %}">
+                {% csrf_token %}
                 <div class="row g-5">
                     <div class="col-md-12 col-lg-6 col-xl-7">
                         <div class="row">
                             <div class="col-md-12 col-lg-6">
                                 <div class="form-item w-100">
                                     <label class="form-label my-3">{% trans "Ism" %}<sup>*</sup></label>
-                                    <input type="text" class="form-control">
+                                    {{ form.first_name }}
+                                    {% for e in form.first_name.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                                 </div>
                             </div>
                             <div class="col-md-12 col-lg-6">
                                 <div class="form-item w-100">
                                     <label class="form-label my-3">{% trans "Familiya" %}<sup>*</sup></label>
-                                    <input type="text" class="form-control">
+                                    {{ form.last_name }}
+                                    {% for e in form.last_name.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                                 </div>
                             </div>
                         </div>
                         <div class="form-item">
                             <label class="form-label my-3">{% trans "Kompaniya nomi" %}</label>
-                            <input type="text" class="form-control">
+                            {{ form.company }}
                         </div>
                         <div class="form-item">
                             <label class="form-label my-3">{% trans "Manzil" %}<sup>*</sup></label>
-                            <input type="text" class="form-control" placeholder="{% trans 'Ko`cha va uy raqami' %}">
+                            {{ form.address }}
+                            {% for e in form.address.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                         </div>
                         <div class="form-item">
                             <label class="form-label my-3">{% trans "Shahar" %}<sup>*</sup></label>
-                            <input type="text" class="form-control">
+                            {{ form.city }}
+                            {% for e in form.city.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                         </div>
                         <div class="form-item">
                             <label class="form-label my-3">{% trans "Mamlakat" %}<sup>*</sup></label>
-                            <input type="text" class="form-control">
+                            {{ form.country }}
+                            {% for e in form.country.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                         </div>
                         <div class="form-item">
                             <label class="form-label my-3">{% trans "Pochta indeksi" %}<sup>*</sup></label>
-                            <input type="text" class="form-control">
+                            {{ form.postcode }}
+                            {% for e in form.postcode.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                         </div>
                         <div class="form-item">
                             <label class="form-label my-3">{% trans "Telefon raqam" %}<sup>*</sup></label>
-                            <input type="tel" class="form-control">
+                            {{ form.phone }}
+                            {% for e in form.phone.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                         </div>
                         <div class="form-item">
                             <label class="form-label my-3">{% trans "Email manzil" %}<sup>*</sup></label>
-                            <input type="email" class="form-control">
+                            {{ form.email }}
+                            {% for e in form.email.errors %}<div class="text-danger small">{{ e }}</div>{% endfor %}
                         </div>
                     </div>
 
@@ -85,9 +92,7 @@
                                     {% for item in cart_items %}
                                     <tr>
                                         <th scope="row">
-                                            <div class="d-flex align-items-center mt-2">
-                                                <img src="{{ item.fruit.image.url }}" class="img-fluid rounded-circle" style="width: 90px; height: 90px;" alt="{{ item.fruit.title }}">
-                                            </div>
+                                            <img src="{{ item.fruit.image.url }}" class="img-fluid rounded-circle mt-2" style="width: 90px; height: 90px;" alt="{{ item.fruit.title }}">
                                         </th>
                                         <td class="py-5">{{ item.fruit.title }}</td>
                                         <td class="py-5">${{ item.price|floatformat:2 }}</td>
@@ -113,7 +118,7 @@
                         </div>
 
                         <div class="row g-4 text-center align-items-center justify-content-center pt-4">
-                            <button type="button" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">{% trans "Buyurtmani tasdiqlash" %}</button>
+                            <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">{% trans "Buyurtmani tasdiqlash" %}</button>
                         </div>
                     </div>
                 </div>

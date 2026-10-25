@@ -1,30 +1,95 @@
-#
 msgid ""
 msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 msgid "Bosh sahifa"
 msgstr "Главная"
 
 msgid "Do'kon"
-msgstr "Супер-Магазин"
+msgstr "Магазин"
+
+msgid "Mahsulot haqida"
+msgstr "О товаре"
+
+msgid "Do'kon tafsilotlari"
+msgstr "О магазине"
+
+msgid "Sahifalar"
+msgstr "Страницы"
 
 msgid "Bog'lanish"
 msgstr "Контакты"
 
+msgid "100% Tabiiy Mahsulotlar"
+msgstr "100% натуральные продукты"
+
 msgid "Tabiiy Sabzavot va Mevalar"
-msgstr "Свежие овощи и фрукты"
+msgstr "Натуральные овощи и фрукты"
 
-msgid "Tabiiy Mahsulotlar"
-msgstr "Натуральные продукты"
+msgid "Qidirish"
+msgstr "Поиск"
 
-msgid "100 foiz xavfsiz to'lov tizimi"
-msgstr "100 процентов безопасная платёжная система"
+msgid "Qidiruv"
+msgstr "Поиск"
 
-msgid "24/7 Qo'llab-quvvatlash"
-msgstr "Поддержка 24/7"
+msgid "Kalit so'zni kiriting..."
+msgstr "Введите ключевое слово..."
+
+msgid "Kalit so`zni kiriting..."
+msgstr "Введите ключевое слово..."
+
+msgid "Yuborish"
+msgstr "Отправить"
+
+msgid "Hozir yuborish"
+msgstr "Отправить сейчас"
+
+msgid "Sabzavotlar"
+msgstr "Овощи"
+
+msgid "Mevalar"
+msgstr "Фрукты"
+
+msgid "Oldingi"
+msgstr "Предыдущий"
+
+msgid "Oldingisi"
+msgstr "Предыдущий"
+
+msgid "Keyingi"
+msgstr "Следующий"
+
+msgid "Keyingisi"
+msgstr "Следующий"
+
+msgid "Toshkent sh., Chilonzor tumani"
+msgstr "г. Ташкент, Чиланзарский район"
+
+msgid "Maxfiylik siyosati"
+msgstr "Политика конфиденциальности"
+
+msgid "Foydalanish shartlari"
+msgstr "Условия использования"
+
+msgid "Qaytaruv xizmati"
+msgstr "Политика возврата"
+
+msgid "Bepul Yetkazib Berish"
+msgstr "Бесплатная доставка"
+
+msgid "300 $ dan ortiq buyurtmalar uchun"
+msgstr "При заказе от 300 $"
+
+msgid "Xavfsiz To'lov"
+msgstr "Безопасная оплата"
+
+msgid "100% xavfsiz to'lov tizimi"
+msgstr "100% безопасная платёжная система"
 
 msgid "30 Kun Qaytarish"
 msgstr "Возврат в течение 30 дней"
@@ -32,188 +97,293 @@ msgstr "Возврат в течение 30 дней"
 msgid "30 kunlik pul qaytarish kafolati"
 msgstr "Гарантия возврата денег в течение 30 дней"
 
-msgid "300 $ dan ortiq buyurtmalar uchun"
-msgstr "Для заказов свыше 300 $"
+msgid "24/7 Qo'llab-quvvatlash"
+msgstr "Поддержка 24/7"
 
-msgid "404 Sahifa"
-msgstr "Страница 404"
+msgid "Tezkor va doimiy yordam"
+msgstr "Быстрая и постоянная помощь"
 
-msgid "Akkount"
-msgstr "Аккаунт"
+msgid "Email pochtangizni kiriting"
+msgstr "Введите вашу почту"
 
-msgid "Aloqa"
-msgstr "Контакты"
+msgid "Obuna bo'lish"
+msgstr "Подписаться"
 
 msgid "Azo bo'lish"
 msgstr "Подписаться"
 
-msgid "Barcha huquqlar hamoyalangan."
-msgstr "Все права защищены."
+msgid "Nega bizni tanlashadi?"
+msgstr "Почему выбирают нас?"
+
+msgid "Biz faqatgina sifatli, sarxil va salomatlik uchun foydali bo'lgan tabiiy mahsulotlarni taqdim etamiz."
+msgstr "Мы предлагаем только качественные, свежие и полезные для здоровья натуральные продукты."
 
 msgid "Batafsil"
 msgstr "Подробнее"
 
-msgid "Bepul Yetkazib Berish"
-msgstr "Бесплатная доставка"
-
-msgid ""
-"Biz faqatgina sifatli, sarxil va salomatlik uchun foydali bo'lgan tabiiy "
-"mahsulotlarni taqdim etamiz."
-msgstr ""
-"Мы предлагаем только качественные, разнообразные и полезные для здоровья "
-"натуральные продукты."
+msgid "Do'kon ma'lumotlari"
+msgstr "Информация о магазине"
 
 msgid "Biz haqimizda"
 msgstr "О нас"
 
-msgid "Buyurtma berish"
-msgstr "Оформить заказ"
+msgid "Yordam"
+msgstr "Помощь"
 
-msgid "Buyurtmalar tarixi"
-msgstr "История заказов"
-
-msgid "Dizayn:"
-msgstr "Дизайн:"
-
-msgid "Do'kon ma'lumotlari"
-msgstr "Информация о магазине"
-
-msgid "Do'kon tafsilotlari"
-msgstr "Подробности о магазине"
-
-msgid ""
-"Doimiy ravishda shu do'kondan xarid qilaman. Narxlari hamyonbop va yetkazib "
-"berish vaqtida amalga oshiriladi."
-msgstr ""
-"Постоянно покупаю в этом магазине. Цены доступные, а доставка всегда "
-"вовремя."
-
-msgid "Email manzilingiz"
-msgstr "Ваш адрес электронной почты"
-
-msgid "Email: info@korzinka.uz"
-msgstr "Email: info@korzinka.uz"
-
-msgid "Foydalanish shartlari"
-msgstr "Условия использования"
-
-msgid "Istaklar ro'yxati"
-msgstr "Список желаний"
-
-msgid "Kalit so'z bo'yicha qidiruv"
-msgstr "Поиск по ключевому слову"
-
-msgid "Kalit so`zni kiriting..."
-msgstr "Введите ключевое слово..."
-
-msgid "Kasbi / Faoliyati"
-msgstr "Профессия / Род деятельности"
-
-msgid "Keyingisi"
-msgstr "Далее"
-
-msgid "Korzinka"
-msgstr "Korzinka"
-
-msgid "Mahsulot haqida"
-msgstr "О товаре"
-
-msgid ""
-"Mahsulotlar juda ham sarxil va sifatli yetkazib berildi. Xizmat ko'rsatish "
-"darajasi a'lo darajada!"
-msgstr ""
-"Товары были доставлены очень разнообразными и качественными. Уровень "
-"обслуживания на высоте!"
-
-msgid "Mamnun mijozlar"
-msgstr "Довольные клиенты"
-
-msgid "Manzil: Toshkent sh., Chilonzor tumani"
-msgstr "Адрес: г. Ташкент, Чиланзарский район"
-
-msgid "Mavjud mahsulotlar"
-msgstr "Доступные товары"
-
-msgid "Maxfiylik siyosati"
-msgstr "Политика конфиденциальности"
+msgid "Akkount"
+msgstr "Аккаунт"
 
 msgid "Mening hisobim"
 msgstr "Мой аккаунт"
 
-msgid "Mevalar"
-msgstr "Фрукты"
+msgid "Savat"
+msgstr "Корзина"
 
-msgid "Mijoz Ismi"
-msgstr "Имя клиента"
+msgid "Istaklar ro'yxati"
+msgstr "Список желаний"
+
+msgid "Buyurtmalar tarixi"
+msgstr "История заказов"
+
+msgid "Buyurtma berish"
+msgstr "Оформление заказа"
 
 msgid "Mijozlar fikri"
 msgstr "Отзывы клиентов"
 
-msgid "Mijozlarimiz fikri"
-msgstr "Мнение наших клиентов"
+msgid "404 Xatolik"
+msgstr "Ошибка 404"
 
-msgid "Mijozlarimiz nima deyishadi!"
-msgstr "Что говорят наши клиенты!"
+msgid "404 Sahifa"
+msgstr "Страница 404"
 
-msgid "Nega bizni tanlashadi?"
-msgstr "Почему выбирают нас?"
+msgid "Aloqa"
+msgstr "Контакты"
 
-msgid "Oldingisi"
-msgstr "Назад"
+msgid "Manzil: Toshkent sh., Chilonzor tumani"
+msgstr "Адрес: г. Ташкент, Чиланзарский район"
 
-msgid "Qaytaruv xizmati"
-msgstr "Служба возврата"
-
-msgid "Qidirish"
-msgstr "Поиск"
-
-msgid "Sabzavotlar"
-msgstr "Овощи"
-
-msgid "Sahifalar"
-msgstr "Страницы"
-
-msgid "Savat"
-msgstr "Корзина"
-
-msgid "Savatga qo'shish"
-msgstr "Добавить в корзину"
-
-msgid "Sifat sertifikatlari"
-msgstr "Сертификаты качества"
-
-msgid "Tabiiy Mahsulotlar Do'koni"
-msgstr "Магазин натуральных продуктов"
-
-msgid "Tabiiy Pomidor"
-msgstr "Натуральный помидор"
-
-msgid "Tabiiy mahsulotlar"
-msgstr "Натуральные продукты"
+msgid "Email: info@korzinka.uz"
+msgstr "Email: info@korzinka.uz"
 
 msgid "Telefon: +998 71 200 00 00"
 msgstr "Телефон: +998 71 200 00 00"
 
-msgid "Tezkor va doimiy yordam"
-msgstr "Быстрая и постоянная поддержка"
-
 msgid "To'lov usullari"
 msgstr "Способы оплаты"
 
-msgid "Toshkent sh., Chilonzor tumani"
-msgstr "г. Ташкент, Чиланзарский район"
+msgid "Barcha huquqlar himoyalangan."
+msgstr "Все права защищены."
 
-msgid "Xavfsiz To'lov"
-msgstr "Безопасная оплата"
+msgid "Barcha huquqlar hamoyalangan."
+msgstr "Все права защищены."
+
+msgid "Dizayn:"
+msgstr "Дизайн:"
+
+msgid "Tabiiy Pomidor"
+msgstr "Натуральный помидор"
+
+msgid "Savatga qo'shish"
+msgstr "В корзину"
+
+msgid "Mamnun mijozlar"
+msgstr "Довольные клиенты"
 
 msgid "Xizmat sifati"
 msgstr "Качество обслуживания"
 
-msgid "Yordam"
-msgstr "Помощь"
+msgid "Sifat sertifikatlari"
+msgstr "Сертификаты качества"
 
-msgid "Yuborish"
-msgstr "Отправить"
+msgid "Mavjud mahsulotlar"
+msgstr "Доступные товары"
 
-msgid "100% xavfsiz to'lov tizimi"
-msgstr ""
+msgid "Doimiy ravishda shu do'kondan xarid qilaman. Narxlari hamyonbop va yetkazib berish vaqtida amalga oshiriladi."
+msgstr "Я регулярно покупаю в этом магазине. Цены доступные, доставка вовремя."
+
+msgid "Email manzilingiz"
+msgstr "Ваш адрес электронной почты"
+
+msgid "Kalit so'z bo'yicha qidiruv"
+msgstr "Поиск по ключевому слову"
+
+msgid "Kasbi / Faoliyati"
+msgstr "Профессия / Деятельность"
+
+msgid "Korzinka"
+msgstr "Korzinka"
+
+msgid "Mahsulotlar juda ham sarxil va sifatli yetkazib berildi. Xizmat ko'rsatish darajasi a'lo darajada!"
+msgstr "Продукты были доставлены очень свежими и качественными. Уровень обслуживания отличный!"
+
+msgid "Mijoz Ismi"
+msgstr "Имя клиента"
+
+msgid "Mijozlarimiz fikri"
+msgstr "Отзывы наших клиентов"
+
+msgid "Mijozlarimiz nima deyishadi!"
+msgstr "Что говорят наши клиенты!"
+
+msgid "Tabiiy Mahsulotlar Do'koni"
+msgstr "Магазин натуральных продуктов"
+
+msgid "Tabiiy mahsulotlar"
+msgstr "Натуральные продукты"
+
+msgid "Tabiiy Mahsulotlar"
+msgstr "Натуральные продукты"
+
+msgid "Yangi mevalar do'koni"
+msgstr "Магазин свежих фруктов"
+
+msgid "Hozircha mahsulotlar yo'q."
+msgstr "Пока нет товаров."
+
+msgid "Mahsulot"
+msgstr "Товар"
+
+msgid "Nomi"
+msgstr "Название"
+
+msgid "Narxi"
+msgstr "Цена"
+
+msgid "Soni"
+msgstr "Количество"
+
+msgid "Jami"
+msgstr "Итого"
+
+msgid "Mahsulotlar:"
+msgstr "Товары:"
+
+msgid "Yetkazib berish"
+msgstr "Доставка"
+
+msgid "Umumiy"
+msgstr "Всего"
+
+msgid "Savatingiz bo'sh"
+msgstr "Ваша корзина пуста"
+
+msgid "Do'konga o'tish"
+msgstr "Перейти в магазин"
+
+msgid "Brokkoli"
+msgstr "Брокколи"
+
+msgid "Kategoriya:"
+msgstr "Категория:"
+
+msgid "Yangi, tabiiy va vitaminlarga boy sabzavot. Fermer xo'jaliklaridan to'g'ridan-to'g'ri yetkazib beriladi."
+msgstr "Свежий натуральный овощ, богатый витаминами. Доставляется напрямую с ферм."
+
+msgid "Salat, sho'rva va issiq taomlar uchun ajoyib tanlov."
+msgstr "Отличный выбор для салатов, супов и горячих блюд."
+
+msgid "Tavsif"
+msgstr "Описание"
+
+msgid "Sharhlar"
+msgstr "Отзывы"
+
+msgid "Og'irligi"
+msgstr "Вес"
+
+msgid "1 kg"
+msgstr "1 кг"
+
+msgid "Kelib chiqishi"
+msgstr "Происхождение"
+
+msgid "Sifati"
+msgstr "Качество"
+
+msgid "Organik"
+msgstr "Органический"
+
+msgid "Tekshiruv"
+msgstr "Проверка"
+
+msgid "Sog'lom"
+msgstr "Полезный"
+
+msgid "Min. buyurtma"
+msgstr "Мин. заказ"
+
+msgid "250 kg"
+msgstr "250 кг"
+
+msgid "2024-yil 12-aprel"
+msgstr "12 апреля 2024"
+
+msgid "Mahsulot sifati juda yaxshi, yangi va mazali."
+msgstr "Качество продукта очень хорошее, свежий и вкусный."
+
+msgid "Narxi qulay, yetkazib berish tez."
+msgstr "Удобная цена, быстрая доставка."
+
+msgid "Buyurtma ma'lumotlari"
+msgstr "Данные для заказа"
+
+msgid "Ism"
+msgstr "Имя"
+
+msgid "Familiya"
+msgstr "Фамилия"
+
+msgid "Kompaniya nomi"
+msgstr "Название компании"
+
+msgid "Manzil"
+msgstr "Адрес"
+
+msgid "Ko`cha va uy raqami"
+msgstr "Улица и номер дома"
+
+msgid "Shahar"
+msgstr "Город"
+
+msgid "Mamlakat"
+msgstr "Страна"
+
+msgid "Pochta indeksi"
+msgstr "Почтовый индекс"
+
+msgid "Telefon raqam"
+msgstr "Номер телефона"
+
+msgid "Email manzil"
+msgstr "Адрес электронной почты"
+
+msgid "Buyurtmani tasdiqlash"
+msgstr "Подтвердить заказ"
+
+msgid "Biz bilan bog'laning"
+msgstr "Свяжитесь с нами"
+
+msgid "Savollaringiz bo'lsa, quyidagi formani to'ldiring yoki bizga to'g'ridan-to'g'ri murojaat qiling."
+msgstr "Если у вас есть вопросы, заполните форму ниже или свяжитесь с нами напрямую."
+
+msgid "Ismingiz"
+msgstr "Ваше имя"
+
+msgid "Xabaringiz"
+msgstr "Ваше сообщение"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Telefon"
+msgstr "Телефон"
+
+msgid "Voy! Sahifa topilmadi"
+msgstr "Упс! Страница не найдена"
+
+msgid "Siz qidirgan sahifa mavjud emas yoki ko'chirilgan."
+msgstr "Страница, которую вы ищете, не существует или была перемещена."
+
+msgid "Bosh sahifaga qaytish"
+msgstr "Вернуться на главную"
