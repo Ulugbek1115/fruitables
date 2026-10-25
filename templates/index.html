@@ -95,31 +95,31 @@
     </div>
     <!-- Featurs Section End -->
 
-    <!-- Fruits Start -->
+        <!-- Fruits Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5">{% trans "Yangi mevalar do'koni" %}</h1>
+            </div>
             <div class="row g-4">
                 {% for fruit in fruits %}
                 <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="border border-primary rounded vesitable-item h-100 bg-white d-flex flex-column justify-content-between">
-                        <div class="position-relative">
+                    <div class="border border-primary rounded h-100 bg-white d-flex flex-column justify-content-between">
+                        <a href="{% url 'fruit_detail' fruit.id %}">
                             {% if fruit.image %}
                                 <img src="{{ fruit.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ fruit.title }}">
                             {% else %}
                                 <img src="{% static 'img/fruite-item-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
                             {% endif %}
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">
-                                Fruit
-                            </div>
-                        </div>
-                        <div class="p-4 rounded-bottom d-flex flex-column flex-grow-1 justify-content-between">
+                        </a>
+                        <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
                             <div>
-                                <h4>{{ fruit.title }}</h4>
-                                <p>{{ fruit.description }}</p>
+                                <h4><a href="{% url 'fruit_detail' fruit.id %}" class="text-dark">{{ fruit.title }}</a></h4>
+                                <p>{{ fruit.description|truncatechars:70 }}</p>
                             </div>
                             <div class="d-flex justify-content-between align-items-center pt-2">
                                 <p class="text-dark fs-5 fw-bold mb-0">{{ fruit.price }} $</p>
-                                                             <form method="post" action="{% url 'add_to_cart' fruit.id %}">
+                                <form method="post" action="{% url 'add_to_cart' fruit.id %}">
                                     {% csrf_token %}
                                     <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
                                         <i class="fa fa-shopping-bag me-2 text-primary"></i> {% trans "Savatga qo'shish" %}
@@ -138,47 +138,6 @@
         </div>
     </div>
     <!-- Fruits End -->
-
-       <!-- Bestsaler Product Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-4">
-                {% for fruit in fruits %}
-                <div class="col-lg-6 col-xl-4">
-                    <div class="p-4 rounded bg-light h-100">
-                        <div class="row align-items-center">
-                            <div class="col-6">
-                                {% if fruit.image %}
-                                    <img src="{{ fruit.image.url }}" class="img-fluid rounded-circle w-100" alt="{{ fruit.title }}">
-                                {% else %}
-                                    <img src="{% static 'img/fruite-item-1.jpg' %}" class="img-fluid rounded-circle w-100" alt="">
-                                {% endif %}
-                            </div>
-                            <div class="col-6">
-                                <h5 class="mb-2">{{ fruit.title }}</h5>
-                                <div class="d-flex my-3">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">{{ fruit.price }} $</h4>
-                                <form method="post" action="{% url 'add_to_cart' fruit.id %}">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                        <i class="fa fa-shopping-bag me-2 text-primary"></i> {% trans "Savatga qo'shish" %}
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <!-- Bestsaler Product End -->
 
     <!-- Fact Start -->
     <div class="container-fluid py-5">

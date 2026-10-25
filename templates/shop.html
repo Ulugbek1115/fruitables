@@ -6,7 +6,6 @@
 
 {% block content %}
 
-    <!-- Page Header -->
     <div class="container-fluid page-header py-5">
         <h1 class="text-center text-dark display-6 mt-5">{% trans "Do'kon" %}</h1>
         <ol class="breadcrumb justify-content-center mb-0">
@@ -15,31 +14,48 @@
         </ol>
     </div>
 
-    <!-- Fruits Shop -->
     <div class="container-fluid fruite py-5">
         <div class="container py-5">
             <h1 class="mb-4">{% trans "Yangi mevalar do'koni" %}</h1>
 
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6">
+                    <form method="get" action="{% url 'shop' %}">
+                        <div class="input-group">
+                            <input type="search" name="q" value="{{ query }}" class="form-control p-3" placeholder="{% trans 'Qidirish' %}">
+                            <button type="submit" class="input-group-text p-3"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            {% if query %}
+            <p class="text-center mb-4">{% trans "Qidiruv natijalari:" %} <strong>{{ query }}</strong></p>
+            {% endif %}
+
             <div class="row g-4 justify-content-center">
                 {% for fruit in fruits %}
-                <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="rounded position-relative fruite-item h-100">
-                        <div class="fruite-img">
-                            {% if fruit.image %}
-                                <img src="{{ fruit.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ fruit.title }}">
-                            {% else %}
-                                <img src="{% static 'img/fruite-item-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
-                            {% endif %}
-                        </div>
+                        <a href="{% url 'fruit_detail' fruit.id %}">
+                            <div class="fruite-img">
+                                {% if fruit.image %}
+                                    <img src="{{ fruit.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ fruit.title }}">
+                                {% else %}
+                                    <img src="{% static 'img/fruite-item-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                {% endif %}
+                            </div>
+                        </a>
                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                            <h4>{{ fruit.title }}</h4>
-                            <p>{{ fruit.description|truncatechars:90 }}</p>
-                            <div class="d-flex justify-content-between align-items-center flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">{{ fruit.price }} $</p>
+                            <h4><a href="{% url 'fruit_detail' fruit.id %}" class="text-dark">{{ fruit.title }}</a></h4>
+                            <p>{{ fruit.description|truncatechars:70 }}</p>
+                            <p class="text-dark fs-5 fw-bold">{{ fruit.price }} $</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="{% url 'fruit_detail' fruit.id %}" class="btn border border-secondary rounded-pill px-3 text-primary">{% trans "Batafsil" %}</a>
                                 <form method="post" action="{% url 'add_to_cart' fruit.id %}">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                        <i class="fa fa-shopping-bag me-2 text-primary"></i> {% trans "Savatga qo'shish" %}
+                                    <button type="submit" class="btn btn-primary rounded-pill px-3 text-white" title="{% trans "Savatga qo'shish" %}">
+                                        <i class="fa fa-shopping-bag"></i>
                                     </button>
                                 </form>
                             </div>
@@ -48,7 +64,7 @@
                 </div>
                 {% empty %}
                 <div class="col-12 text-center py-5">
-                    <p>{% trans "Hozircha mahsulotlar yo'q." %}</p>
+                    <p>{% trans "Mahsulotlar topilmadi" %}</p>
                 </div>
                 {% endfor %}
             </div>

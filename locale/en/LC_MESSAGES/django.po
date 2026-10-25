@@ -388,7 +388,6 @@ msgstr "The page you are looking for does not exist or has been moved."
 msgid "Bosh sahifaga qaytish"
 msgstr "Back to Home"
 
-
 msgid "Buyurtma qabul qilindi!"
 msgstr "Order received!"
 
@@ -400,3 +399,12 @@ msgstr "We will contact you soon."
 
 msgid "Xaridni davom ettirish"
 msgstr "Continue shopping"
+
+msgid "Qidiruv natijalari:"
+msgstr "Search results:"
+
+msgid "Mahsulotlar topilmadi"
+msgstr "No products found"
+
+msgid "Boshqa mahsulotlar"
+msgstr "Other products"

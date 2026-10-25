@@ -64,8 +64,7 @@
                     <div class="navbar-nav mx-auto">
                         {% with url_name=request.resolver_match.url_name %}
                         <a href="{% url 'index' %}" class="nav-item nav-link {% if url_name == 'index' %}active{% endif %}">{% trans "Bosh sahifa" %}</a>
-                        <a href="{% url 'shop' %}" class="nav-item nav-link {% if url_name == 'shop' %}active{% endif %}">{% trans "Do'kon" %}</a>
-                        <a href="{% url 'shop_detail' %}" class="nav-item nav-link {% if url_name == 'shop_detail' %}active{% endif %}">{% trans "Mahsulot haqida" %}</a>
+                        <a href="{% url 'shop' %}" class="nav-item nav-link {% if url_name == 'shop' or url_name == 'fruit_detail' %}active{% endif %}">{% trans "Do'kon" %}</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{% trans "Sahifalar" %}</a>
                             <div class="dropdown-menu m-0 bg-secondary rounded-0">
@@ -116,10 +115,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex align-items-center">
-                    <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="{% trans 'Kalit so`zni kiriting...' %}" aria-describedby="search-icon-1">
-                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                    </div>
+                    <form method="get" action="{% url 'shop' %}" class="input-group w-75 mx-auto d-flex">
+                        <input type="search" name="q" class="form-control p-3" placeholder="{% trans 'Kalit so`zni kiriting...' %}">
+                        <button type="submit" class="input-group-text p-3"><i class="fa fa-search"></i></button>
+                    </form>
                 </div>
             </div>
         </div>

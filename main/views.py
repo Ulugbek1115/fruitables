@@ -53,11 +53,21 @@ def index(request):
 
 
 def shop(request):
-    return render(request, 'shop.html', {'fruits': Fruit.objects.all()})
+    query = request.GET.get('q', '').strip()
+    fruits = Fruit.objects.all()
+    if query:
+        fruits = fruits.filter(title__icontains=query)
+    return render(request, 'shop.html', {'fruits': fruits, 'query': query})
 
 
-def shop_detail(request):
-    return render(request, 'shop-detail.html')
+def fruit_detail(request, fruit_id):
+    fruit = get_object_or_404(Fruit, id=fruit_id)
+    related = Fruit.objects.exclude(id=fruit.id)[:4]
+    return render(request, 'shop-detail.html', {
+        'fruit': fruit,
+        'price': parse_price(fruit.price),
+        'related': related,
+    })
 
 
 def cart(request):
@@ -66,9 +76,15 @@ def cart(request):
 
 @require_POST
 def add_to_cart(request, fruit_id):
+    fruit = get_object_or_404(Fruit, id=fruit_id)
+    try:
+        quantity = max(1, min(int(request.POST.get('quantity', 1)), 99))
+    except ValueError:
+        quantity = 1
+
     cart_session = request.session.get('cart', {})
-    key = str(fruit_id)
-    cart_session[key] = cart_session.get(key, 0) + 1
+    key = str(fruit.id)
+    cart_session[key] = cart_session.get(key, 0) + quantity
     request.session['cart'] = cart_session
     return redirect(request.META.get('HTTP_REFERER') or 'shop')
 

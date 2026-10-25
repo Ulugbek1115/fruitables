@@ -2,33 +2,34 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}Korzinka - {% trans "Mahsulot haqida" %}{% endblock %}
+{% block title %}Korzinka - {{ fruit.title }}{% endblock %}
 
 {% block content %}
 
-    <!-- Page Header -->
     <div class="container-fluid page-header py-5">
-        <h1 class="text-center text-dark display-6 mt-5">{% trans "Mahsulot haqida" %}</h1>
+        <h1 class="text-center text-dark display-6 mt-5">{{ fruit.title }}</h1>
         <ol class="breadcrumb justify-content-center mb-0">
             <li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a></li>
             <li class="breadcrumb-item"><a href="{% url 'shop' %}">{% trans "Do'kon" %}</a></li>
-            <li class="breadcrumb-item active text-primary">{% trans "Mahsulot haqida" %}</li>
+            <li class="breadcrumb-item active text-primary">{{ fruit.title }}</li>
         </ol>
     </div>
 
-    <!-- Single Product -->
     <div class="container-fluid py-5 mt-5">
         <div class="container py-5">
-            <div class="row g-4 mb-5">
+            <div class="row g-5 mb-5">
                 <div class="col-lg-6">
                     <div class="border rounded">
-                        <img src="{% static 'img/single-item.jpg' %}" class="img-fluid rounded" alt="{% trans 'Brokkoli' %}">
+                        {% if fruit.image %}
+                            <img src="{{ fruit.image.url }}" class="img-fluid rounded w-100" alt="{{ fruit.title }}">
+                        {% else %}
+                            <img src="{% static 'img/single-item.jpg' %}" class="img-fluid rounded w-100" alt="">
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h4 class="fw-bold mb-3">{% trans "Brokkoli" %}</h4>
-                    <p class="mb-3">{% trans "Kategoriya:" %} {% trans "Sabzavotlar" %}</p>
-                    <h5 class="fw-bold mb-3">3.35 $</h5>
+                    <h2 class="fw-bold mb-3">{{ fruit.title }}</h2>
+                    <h4 class="fw-bold text-primary mb-4">${{ price|floatformat:2 }}</h4>
                     <div class="d-flex mb-4">
                         <i class="fa fa-star text-secondary"></i>
                         <i class="fa fa-star text-secondary"></i>
@@ -36,93 +37,42 @@
                         <i class="fa fa-star text-secondary"></i>
                         <i class="fa fa-star"></i>
                     </div>
-                    <p class="mb-4">{% trans "Yangi, tabiiy va vitaminlarga boy sabzavot. Fermer xo'jaliklaridan to'g'ridan-to'g'ri yetkazib beriladi." %}</p>
-                    <p class="mb-4">{% trans "Salat, sho'rva va issiq taomlar uchun ajoyib tanlov." %}</p>
-                    <a href="{% url 'shop' %}" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
-                        <i class="fa fa-shopping-bag me-2 text-primary"></i> {% trans "Do'konga o'tish" %}
-                    </a>
+                    <h5 class="mb-2">{% trans "Tavsif" %}</h5>
+                    <p class="mb-4">{{ fruit.description }}</p>
+
+                    <form method="post" action="{% url 'add_to_cart' fruit.id %}" class="d-flex align-items-center flex-wrap gap-3">
+                        {% csrf_token %}
+                        <div>
+                            <label class="form-label mb-1">{% trans "Soni" %}</label>
+                            <input type="number" name="quantity" value="1" min="1" max="99" class="form-control" style="width: 100px;">
+                        </div>
+                        <button type="submit" class="btn border border-secondary rounded-pill px-4 py-3 text-primary mt-4">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> {% trans "Savatga qo'shish" %}
+                        </button>
+                    </form>
                 </div>
+            </div>
 
-                <div class="col-lg-12">
-                    <nav>
-                        <div class="nav nav-tabs mb-3">
-                            <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
-                                id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
-                                aria-controls="nav-about" aria-selected="true">{% trans "Tavsif" %}</button>
-                            <button class="nav-link border-white border-bottom-0" type="button" role="tab"
-                                id="nav-mission-tab" data-bs-toggle="tab" data-bs-target="#nav-mission"
-                                aria-controls="nav-mission" aria-selected="false">{% trans "Sharhlar" %}</button>
-                        </div>
-                    </nav>
-                    <div class="tab-content mb-5">
-                        <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-                            <div class="px-2">
-                                <div class="row g-4">
-                                    <div class="col-lg-6">
-                                        <div class="row bg-light align-items-center text-center justify-content-center py-2">
-                                            <div class="col-6"><p class="mb-0">{% trans "Og'irligi" %}</p></div>
-                                            <div class="col-6"><p class="mb-0">{% trans "1 kg" %}</p></div>
-                                        </div>
-                                        <div class="row text-center align-items-center justify-content-center py-2">
-                                            <div class="col-6"><p class="mb-0">{% trans "Kelib chiqishi" %}</p></div>
-                                            <div class="col-6"><p class="mb-0">Agro Farm</p></div>
-                                        </div>
-                                        <div class="row bg-light text-center align-items-center justify-content-center py-2">
-                                            <div class="col-6"><p class="mb-0">{% trans "Sifati" %}</p></div>
-                                            <div class="col-6"><p class="mb-0">{% trans "Organik" %}</p></div>
-                                        </div>
-                                        <div class="row text-center align-items-center justify-content-center py-2">
-                                            <div class="col-6"><p class="mb-0">{% trans "Tekshiruv" %}</p></div>
-                                            <div class="col-6"><p class="mb-0">{% trans "Sog'lom" %}</p></div>
-                                        </div>
-                                        <div class="row bg-light text-center align-items-center justify-content-center py-2">
-                                            <div class="col-6"><p class="mb-0">{% trans "Min. buyurtma" %}</p></div>
-                                            <div class="col-6"><p class="mb-0">{% trans "250 kg" %}</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
-                            <div class="d-flex">
-                                <img src="{% static 'img/avatar.jpg' %}" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
-                                <div>
-                                    <p class="mb-2" style="font-size: 14px;">{% trans "2024-yil 12-aprel" %}</p>
-                                    <div class="d-flex justify-content-between">
-                                        <h5>Jason Smith</h5>
-                                        <div class="d-flex mb-3">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <p>{% trans "Mahsulot sifati juda yaxshi, yangi va mazali." %}</p>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <img src="{% static 'img/avatar.jpg' %}" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
-                                <div>
-                                    <p class="mb-2" style="font-size: 14px;">{% trans "2024-yil 12-aprel" %}</p>
-                                    <div class="d-flex justify-content-between">
-                                        <h5>Sam Peters</h5>
-                                        <div class="d-flex mb-3">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-dark">{% trans "Narxi qulay, yetkazib berish tez." %}</p>
-                                </div>
-                            </div>
+            {% if related %}
+            <h3 class="fw-bold mb-4">{% trans "Boshqa mahsulotlar" %}</h3>
+            <div class="row g-4">
+                {% for item in related %}
+                <div class="col-md-6 col-lg-3">
+                    <div class="rounded border border-secondary h-100">
+                        <a href="{% url 'fruit_detail' item.id %}">
+                            {% if item.image %}
+                                <img src="{{ item.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ item.title }}">
+                            {% endif %}
+                        </a>
+                        <div class="p-3">
+                            <h5><a href="{% url 'fruit_detail' item.id %}" class="text-dark">{{ item.title }}</a></h5>
+                            <p class="fw-bold mb-0">{{ item.price }} $</p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
+            {% endif %}
         </div>
     </div>
 
